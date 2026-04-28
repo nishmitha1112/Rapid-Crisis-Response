@@ -145,6 +145,17 @@ const LivePOILayer = ({ onDataFetched }: { onDataFetched: (pois: POI[]) => void 
   ) : null;
 };
 
+const ResizeHandler = () => {
+  const map = useMap();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      map.invalidateSize();
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [map]);
+  return null;
+};
+
 const DigitalTwin: React.FC<DigitalTwinProps> = ({ data, incidentUnit, onUnitSelect }) => {
   const [selectedUnit, setSelectedUnit] = useState<string | null>(null);
   const [mapType, setMapType] = useState<'satellite' | 'street'>('satellite');
@@ -375,6 +386,7 @@ const DigitalTwin: React.FC<DigitalTwinProps> = ({ data, incidentUnit, onUnitSel
           worldCopyJump={true}
         >
           <MapController center={mapCenter} zoom={mapZoom} />
+          <ResizeHandler />
           
           <TileLayer
             url={mapType === 'satellite' 
