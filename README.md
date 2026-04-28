@@ -6,7 +6,7 @@
 ![Responder Dashboard](public/screenshots/tactical_dashboard_fixed.png)
 
 ### 🌑 Premium Dark Mode
-![Dark Mode View](public/screenshots/dark_mode.png)
+![Dark Mode View](public/screenshots/dark_mode_fixed.png)
 
 ### 🌐 Global Intelligence Matrix
 ![Intelligence Matrix](public/screenshots/matrix.png)
