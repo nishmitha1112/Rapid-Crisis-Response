@@ -1,7 +1,5 @@
 # Emergency Management Frontend
 
-A modern React-based frontend for the Emergency Management System that provides real-time monitoring and response coordination capabilities.
-
 ## 📸 Tactical Preview
 
 ### 🖥️ Responder Dashboard
@@ -12,6 +10,8 @@ A modern React-based frontend for the Emergency Management System that provides 
 
 ### 🌐 Global Intelligence Matrix
 ![Intelligence Matrix](public/screenshots/matrix.png)
+
+A modern React-based frontend for the Emergency Management System that provides real-time monitoring and response coordination capabilities.
 
 ## Features
 
