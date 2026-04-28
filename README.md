@@ -8,6 +8,9 @@
 ### 🖥️ Responder Dashboard (Tactical View)
 ![Responder Dashboard](public/screenshots/tactical_dashboard_fixed.png)
 
+### 🏃 Guest Assistance & Evacuation
+![Guest Dashboard](public/screenshots/guest_dashboard.png)
+
 ### 🌐 Global Intelligence Matrix
 ![Intelligence Matrix](public/screenshots/matrix.png)
 
