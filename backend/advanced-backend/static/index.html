@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Crisis Response Backend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(-45deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #667eea 75%, #764ba2 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+        }
+        
+        .glow-red { box-shadow: 0 0 20px rgba(220, 38, 38, 0.3), 0 0 40px rgba(220, 38, 38, 0.1); }
+        .glow-amber { box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 0 40px rgba(245, 158, 11, 0.1); }
+        .glow-green { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), 0 0 40px rgba(16, 185, 129, 0.1); }
+        .glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.1); }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen p-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header -->
+            <header class="relative overflow-hidden mb-8">
+                <div class="absolute inset-0 animated-gradient opacity-20"></div>
+                <div class="relative glass-morphism border-b border-white/10 px-8 py-6">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-6">
+                            <div class="relative group">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="relative p-4 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-400/30">
+                                    <i data-lucide="shield" class="w-8 h-8 text-blue-400 floating"></i>
+                                    <div class="absolute -bottom-2 left-1/2 right-1/2 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full glow-blue"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <h1 class="text-4xl font-black text-white tracking-tight mb-2">Advanced Crisis Response Backend</h1>
+                                <p class="text-base text-gray-300 font-light">Enterprise-grade emergency management system</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-6">
+                            <div class="relative group">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div class="relative px-6 py-3 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl border border-green-400/30">
+                                    <div class="flex items-center space-x-3">
+                                        <div class="relative">
+                                            <i data-lucide="activity" class="w-5 h-5 text-green-400"></i>
+                                            <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full pulse-glow glow-green"></div>
+                                        </div>
+                                        <span class="text-sm font-semibold text-green-400">API Active</span>
+                                    </div>
+                                    <div class="absolute -bottom-2 left-1/2 right-1/2 h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full glow-green"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- API Documentation -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- API Endpoints -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative glass-morphism rounded-2xl p-6">
+                        <div class="flex items-center space-x-4 pb-6 border-b border-white/10">
+                            <div class="relative">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-xl blur-lg"></div>
+                                <div class="relative p-3 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl border border-purple-400/30">
+                                    <i data-lucide="api" class="w-6 h-6 text-purple-400 floating"></i>
+                                    <div class="absolute -bottom-1 left-1/2 right-1/2 h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                                </div>
+                            </div>
+                            <h2 class="text-2xl font-bold tracking-tight text-white mb-6">API Endpoints</h2>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-4 border border-blue-400/20">
+                                    <h3 class="font-semibold text-blue-400 mb-2">Core Management</h3>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><code class="text-blue-300">POST /users</code> - Create user</li>
+                                        <li><code class="text-blue-300">GET /users</code> - List users</li>
+                                        <li><code class="text-blue-300">POST /alerts</code> - Create incident</li>
+                                        <li><code class="text-blue-300">GET /incidents</code> - List incidents</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-4 border border-green-400/20">
+                                    <h3 class="font-semibold text-green-400 mb-2">Incident Management</h3>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><code class="text-green-300">POST /incidents/{id}/tasks/{task_id}/complete</code></li>
+                                        <li><code class="text-green-300">POST /incidents/{id}/status</code></li>
+                                        <li><code class="text-green-300">POST /status-updates</code></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-xl p-4 border border-amber-400/20">
+                                    <h3 class="font-semibold text-amber-400 mb-2">Safety & Compliance</h3>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><code class="text-amber-300">POST /lone-worker-checkins</code></li>
+                                        <li><code class="text-amber-300">GET /audit-log</code></li>
+                                        <li><code class="text-amber-300">GET /authority-feed/{id}</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="relative glass-morphism rounded-2xl p-6">
+                        <div class="flex items-center space-x-4 pb-6 border-b border-white/10">
+                            <div class="relative">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-amber-500/30 to-orange-500/30 rounded-xl blur-lg"></div>
+                                <div class="relative p-3 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-xl border border-amber-400/30">
+                                    <i data-lucide="zap" class="w-6 h-6 text-amber-400 floating"></i>
+                                    <div class="absolute -bottom-1 left-1/2 right-1/2 h-1 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full"></div>
+                                </div>
+                            </div>
+                            <h2 class="text-2xl font-bold tracking-tight text-white mb-6">Advanced Features</h2>
+                            
+                            <div class="space-y-4">
+                                <div class="bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-xl p-4 border border-red-400/20">
+                                    <h3 class="font-semibold text-red-400 mb-2">🔒 Security & Audit</h3>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li>• Cryptographic hash chains</li>
+                                        <li>• Role-based access control</li>
+                                        <li>• Immutable audit trails</li>
+                                        <li>• Blockchain-style verification</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-4 border border-blue-400/20">
+                                    <h3 class="font-semibold text-blue-400 mb-2">📡 Real-time Communication</h3>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li>• WebSocket connections</li>
+                                        <li>• Multi-channel broadcasting</li>
+                                        <li>• Zone-specific updates</li>
+                                        <li>• Role-based notifications</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-xl p-4 border border-green-400/20">
+                                    <h3 class="font-semibold text-green-400 mb-2">🏥 Incident Management</h3>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li>• 6 alert types supported</li>
+                                        <li>• Automated checklists</li>
+                                        <li>• Zone-based instructions</li>
+                                        <li>• Task completion tracking</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WebSocket Demo -->
+            <div class="mt-8 relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="relative glass-morphism rounded-2xl p-6">
+                    <div class="flex items-center space-x-4 pb-6 border-b border-white/10">
+                        <div class="relative">
+                            <div class="absolute -inset-1 bg-gradient-to-r from-green-500/30 to-emerald-500/30 rounded-xl blur-lg"></div>
+                            <div class="relative p-3 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl border border-green-400/30">
+                                <i data-lucide="radio" class="w-6 h-6 text-green-400 floating"></i>
+                                <div class="absolute -bottom-1 left-1/2 right-1/2 h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full glow-green"></div>
+                            </div>
+                        </div>
+                        <h2 class="text-2xl font-bold tracking-tight text-white mb-6">Real-time WebSocket Demo</h2>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-4 border border-blue-400/20">
+                        <h3 class="font-semibold text-blue-400 mb-4">Connect to Live Updates</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-300 mb-2">WebSocket Channel</label>
+                                <input type="text" id="channel" placeholder="dashboard" class="w-full px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="flex space-x-4">
+                                <button onclick="connectWebSocket()" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+                                    Connect
+                                </button>
+                                <button onclick="disconnectWebSocket()" class="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors">
+                                    Disconnect
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div id="messages" class="mt-6 h-64 bg-gray-800 border border-gray-600 rounded-lg p-4 overflow-y-auto">
+                            <div class="text-sm text-gray-400">WebSocket messages will appear here...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        let ws = null;
+        let reconnectAttempts = 0;
+        const maxReconnectAttempts = 5;
+        
+        function connectWebSocket() {
+            const channel = document.getElementById('channel').value || 'dashboard';
+            const wsUrl = `ws://localhost:8002/ws/${channel}`;
+            
+            try {
+                ws = new WebSocket(wsUrl);
+                
+                ws.onopen = function(event) {
+                    console.log('Connected to WebSocket:', channel);
+                    addMessage('Connected to channel: ' + channel, 'success');
+                    reconnectAttempts = 0;
+                };
+                
+                ws.onmessage = function(event) {
+                    const data = JSON.parse(event.data);
+                    console.log('Received:', data);
+                    addMessage('Received: ' + JSON.stringify(data, null, 2), 'info');
+                };
+                
+                ws.onclose = function(event) {
+                    console.log('WebSocket disconnected');
+                    addMessage('Disconnected from WebSocket', 'warning');
+                    
+                    // Auto-reconnect logic
+                    if (reconnectAttempts < maxReconnectAttempts) {
+                        reconnectAttempts++;
+                        setTimeout(() => {
+                            addMessage(`Attempting to reconnect... (${reconnectAttempts}/${maxReconnectAttempts})`, 'warning');
+                            connectWebSocket();
+                        }, 3000);
+                    }
+                };
+                
+                ws.onerror = function(error) {
+                    console.error('WebSocket error:', error);
+                    addMessage('WebSocket error: ' + error, 'error');
+                };
+                
+            } catch (error) {
+                console.error('Connection error:', error);
+                addMessage('Connection failed: ' + error, 'error');
+            }
+        }
+        
+        function disconnectWebSocket() {
+            if (ws) {
+                ws.close();
+                ws = null;
+                addMessage('Manually disconnected', 'info');
+            }
+        }
+        
+        function addMessage(message, type = 'info') {
+            const messages = document.getElementById('messages');
+            const timestamp = new Date().toLocaleTimeString();
+            const colorClass = type === 'error' ? 'text-red-400' : type === 'warning' ? 'text-amber-400' : type === 'success' ? 'text-green-400' : 'text-gray-300';
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `text-sm ${colorClass} mb-2`;
+            messageDiv.innerHTML = `<span class="text-gray-500">[${timestamp}]</span> ${message}`;
+            
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+        
+        // Auto-connect on page load
+        window.addEventListener('load', function() {
+            setTimeout(connectWebSocket, 1000);
+        });
+    </script>
+</body>
+</html>
