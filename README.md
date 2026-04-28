@@ -2,6 +2,9 @@
 
 ## 📸 Tactical Preview
 
+### 🔐 Secure Access
+![Login Screen](public/screenshots/login_screen.png)
+
 ### 🖥️ Responder Dashboard (Tactical View)
 ![Responder Dashboard](public/screenshots/tactical_dashboard_fixed.png)
 
