@@ -2,6 +2,17 @@
 
 A modern React-based frontend for the Emergency Management System that provides real-time monitoring and response coordination capabilities.
 
+## 📸 Tactical Preview
+
+### 🖥️ Responder Dashboard
+![Responder Dashboard](public/screenshots/tactical_dashboard.png)
+
+### 🌑 Premium Dark Mode
+![Dark Mode View](public/screenshots/dark_mode.png)
+
+### 🌐 Global Intelligence Matrix
+![Intelligence Matrix](public/screenshots/matrix.png)
+
 ## Features
 
 - **Real-time Emergency Dashboard**: Comprehensive view of emergency events with live updates
