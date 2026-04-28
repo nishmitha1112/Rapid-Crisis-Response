@@ -2,8 +2,8 @@
 
 ## 📸 Tactical Preview
 
-### 🖥️ Responder Dashboard
-![Responder Dashboard](public/screenshots/tactical_dashboard.png)
+### 🖥️ Responder Dashboard (Tactical View)
+![Responder Dashboard](public/screenshots/tactical_dashboard_fixed.png)
 
 ### 🌑 Premium Dark Mode
 ![Dark Mode View](public/screenshots/dark_mode.png)
